@@ -15,7 +15,7 @@ import jakarta.persistence.*;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(name = "user_id")
+    @Column(name = "user_id", columnDefinition = "VARCHAR(36)")
     private UUID userId;
 
     @Column(unique = true)
